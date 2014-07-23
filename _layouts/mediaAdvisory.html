@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  {% include head.html %}
+
+    <body vocab="http://schema.org/" typeof="WebPage">
+
+    {% include header.html %}
+    <main role="main" typeof="mainContentOfPage" class="container">
+    <div typeof="NewsArticle">
+      <!-- Source: {{page.cite}} -->
+        <p class="tagline">{{ page.type }}
+        <span class="pull-right">
+        <span class="wb-inv"> from&nbsp;</span>
+        <img class="mrgn-bttm-lg" alt="{{page.publisher}}" property="publisher" src="http://news.gc.ca/web/Dha.do?fipId={{page.publisherID}}&amp;langnum=1">
+        </span>
+        </p>
+      <div class="wb-share"></div>
+        <aside class="alert alert-info mrgn-tp-lg">
+          <p>This <a href="{{ page.cite }}">{{ page.type }}</a> was pulled from News.gc.ca</p>
+        </aside>
+      <article property="articleBody">
+        <h1 property="headline" id="wb-cont">{{page.title}}</h1>
+        <p><time datetime="{{ page.datePublished | date: "%Y-%m-%d" }}" property="datePublished"> {{ page.datePublished | date: "%B %d, %Y" }}</time> - <span property="dateline">{{page.dateline}}</span> - <span property="publisher">{{page.publisher}}</span></p>
+
+{{ page.description }}
+
+{% for info in page.event %}
+<div typeof="Event">
+  <meta  property="startDate" content="{{ info.eventDate | date: "%Y-%m-%d" }}T{{ info.eventTime }}" />
+<dl class="dl-horizontal">
+    <dt>Date:</dt>
+    <dd>{{ info.eventDate | date: "%B %d, %Y" }}</dd>
+    <dt>Time:</dt>
+    <dd>{{ info.eventTime }}</dd>
+    <dt>Location:</dt>
+    <dd property="location" typeof="Place">
+      {% if info.eventLocation %}{{ info.eventLocation }}<br />{% endif %}
+      <span property="address" typeof="PostalAddress">
+        <span property="streetAddress">{{ info.streetAddress }}</span><br />
+        <span property="addressLocality">{{ info.addressLocality }}</span>, <span property="addressRegion">{{ info.addressRegion }}</span><br />
+      </span>
+    </dd>
+</dl>
+</div>
+{% endfor %}
+
+      				<p class="text-center">-30-</p>
+			</article>
+
+    {% include additional.html %}
+
+    {% include footer.html %}
+

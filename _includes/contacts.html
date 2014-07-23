@@ -1,0 +1,24 @@
+{% if page.contact %} 
+<section>
+<h2>Contacts</h2>
+{% for contacts in page.contact %}
+{% for people in contacts.person %}
+<div typeof="ContactPoint">
+<p typeof="person"><span property="givenName">{{ people.givenName }}</span> <span property="familyName">{{ people.familyName }}</span><br />
+{% if people.jobTitle %}<span property="jobTitle">{{ people.jobTitle }}</span><br />{% endif %}
+{% if people.worksFor %}<span property="worksFor">{{ people.worksFor }}</span><br />{% endif %}
+{% if people.telephone %}<span property="telephone">{{ people.telephone }}</span><br />{% endif %}
+{% if people.emailTitle %}<span property="email"><a href="mailto:{{people.emailAddress}}">{{ people.emailTitle }}</a></span><br />{% endif %}
+</p>
+</div>
+{% endfor %}
+{% for organizations in contacts.organization %}
+<p typeof="ContactPoint"><span property="contactType">{{ organizations.contactType }}</span><br />
+{% if organizations.name %}<span property="name">{{ organizations.name }}</span><br />{% endif %}
+{% if organizations.addressLocality %}<span property="addressLocality">{{ organizations.addressLocality }}</span><br />{% endif %}
+{% if organizations.telephone %}<span property="telephone">{{ organizations.telephone }}</span><br />{% endif %}
+{% if organizations.emailTitle %}<span property="email"><a href="mailto:{{organizations.emailAddress}}">{{ organizations.emailTitle }}</a></span><br />{% endif %}</p>
+{% endfor %}
+{% endfor %}
+</section>
+{% endif %}

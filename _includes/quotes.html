@@ -1,0 +1,16 @@
+{% if page.citations %} 
+<section>
+	<h2>Quotes</h2>
+	{% for citation in page.citations %} 
+	<blockquote typeof="citation">
+		<p property="text">“{{ citation.quote }}”</p>
+		<footer>
+		<cite property="person">
+			{% for people in citation.person %}
+			<em typeOf="person">{% if people.honorificPrefix %}<span property="honorificPrefix">{{ people.honorificPrefix }}</span>{% endif %} <span property="givenName">{{ people.givenName }}</span> <span property="familyName">{{ people.familyName }}</span><br />
+			<span property="jobTitle">{{ people.jobTitle }}</span>{% if eople.affiliation %} - <span property="affiliation">{{ people.affiliation }}</span>{% endif %}</em>{% endfor %}</cite>
+		</footer>
+		</blockquote>
+	{% endfor %}
+</section>
+{% endif %}

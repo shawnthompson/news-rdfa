@@ -1,0 +1,15 @@
+---
+layout: default
+title: Samples of using RDFa Lite with media document types on News.gc.ca
+dateModified: July 23, 2014
+---
+
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <strong>{% if post.layout == "news" %}News Release{% endif %}{% if post.layout == "mediaAdvisory" %}Media Advisory{% endif %}</strong> - <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%b %-d, %Y" }}
+        
+      </li>
+    {% endfor %}
+  </ul>

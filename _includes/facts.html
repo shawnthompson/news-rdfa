@@ -1,0 +1,22 @@
+{% if page.facts %} 
+<section>
+	<h2>Quick Facts</h2>
+	{% if page.factsTitle %}
+	<section>
+		<h3>{{ page.factsTitle}}</h3>
+		{% endif %}
+		<ul>{% for fact in page.facts %}
+			<li>{{ fact.quickFact }}
+				{% if fact.subFact %}
+				<ul>{% for subFacts in fact.subFact %}<li>{{ subFacts.quickFact }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</li>
+		{% endfor %}</ul>
+		{% if page.factsTitle %}
+	</section>
+	{% endif %}
+</section>
+{% endif %}
+
