@@ -8,7 +8,7 @@
 	<meta charset="utf-8" />
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 	wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-	<title>Harper Government Invests in Recreational Fisheries Conservation Projects in Newfoundland and Labrador - News Releases - RDFa Lite</title>
+	<title>Form for News.gc.ca - News Releases - RDFa Lite</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<!-- Meta data -->
 	<meta name="description" content="" />
@@ -115,115 +115,243 @@
             <ol class="breadcrumb">
               <li><a rel="home" href="http://www.canada.ca/en/index.html">Home</a></li>
               <li><a href="#">News</a></li>
-              <li><a href="#">News Release</a></li>
-              <li>Harper Government Invests in Recreational Fisheries Conservation Projects in Newfoundland and Labrador</li>
+              <li><a href="#"></a></li>
+              <li>Form for News.gc.ca</li>
             </ol>
           </div>
         </div>
       </nav>
     </header>
+
     <main role="main" typeof="mainContentOfPage" class="container">
-    <div typeof="NewsArticle">
-      <!-- Source: http://news.gc.ca/web/article-en.do?mthd=tp&amp;crtr.page=1&amp;nid=869869&amp;crtr.tp1D=1 -->
-        <p class="tagline">News Release
-        <span class="pull-right">
-        <span class="wb-inv"> from&nbsp;</span>
-        <img class="mrgn-bttm-lg" alt="Fisheries and Oceans Canada" property="publisher" src="http://news.gc.ca/web/Dha.do?fipId=6669&amp;langnum=1">
-        </span>
-        </p>
-      <div class="wb-share"></div>
-        <aside class="alert alert-info mrgn-tp-lg">
-          <p>This <a href="http://news.gc.ca/web/article-en.do?mthd=tp&amp;crtr.page=1&amp;nid=869869&amp;crtr.tp1D=1">News Release</a> was pulled from News.gc.ca</p>
-        </aside>
-      <article property="articleBody">
-        <h1 property="headline" id="wb-cont">Harper Government Invests in Recreational Fisheries Conservation Projects in Newfoundland and Labrador</h1>
-        <p><time datetime="2014-07-23" property="datePublished"> July 23, 2014</time> - <span property="dateline">St. Johns, Newfoundland and Labrador</span> - <span property="publisher">Fisheries and Oceans Canada</span></p>
+    <div>
 
-        <section>
-    <h2>The Government of Canada to invest up to $5.5 million to restore recreational fisheries habitat through the National Conservation Plan</h2>
-    <p>The Honourable Gail Shea, Minister of Fisheries and Oceans, today announced investments by the Government of Canada to support conservation projects in Newfoundland and Labrador through the Recreational Fisheries Conservation Partnerships Program (RFCPP). Under the second round of the program, over $160,000 is awarded to five projects in the province to rebuild, restore and rehabilitate fish habitat.</p>
-    <p>The Recreational Fisheries Conservation Partnerships Program was announced in Economic Action Plan 2013 to support fisheries habitat restoration projects led by recreational fishing and angling groups, as well as conservation organizations. Given its early success and high demand, an additional investment in Economic Action Plan 2014 increased the funding available through the program to a total investment of $25 million.</p>
-    <p>On May 15, 2014, the National Conservation Plan was launched to provide a more coordinated approach to conservation efforts across the country. Since 2006, the Government of Canada has taken important steps to conserve and restore our country&rsquo;s natural environment and connect Canadians to our rich natural heritage. To date, the Recreational Fisheries Conservation Partnerships Program has invested nearly $6 million (Round I), in 94 fisheries habitat restoration projects across Canada and funding to support up to an additional 127 projects (Round II) is currently underway. The window to apply for Round III funding is now open and applications will be accepted until August 15, 2014</p>
-  </section>
+        <h1 property="headline" id="wb-cont">Form for News.gc.ca</h1>
+       
+       <p>The form on this pages is built to assist publishing news releases using HTML data and `RDFa`</p> 
+
+<form class="form-horizontal" id="posting" role="form">
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="type">Type</label>
+			<div class="col-sm-10">
+				<select name="type" id="type" class="form-control">
+					<option value="Backgrounders">Backgrounders</option>
+					<option value="Media Advisory">Media Advisory</option>
+					<option value="News Releases" selected>News Releases</option>
+					<option value="Speeches">Speeches</option>
+					<option value="Statements">Statements</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="headline">Title of posting</label>
+			<div class="col-sm-10">
+				<input class="form-control full-width" id="headline" name="headline" type="text" placeholder="headline">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="datePublished">Date published</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="datePublished" name="datePublished" type="date" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="publisher">Publisher</label>
+			<div class="col-sm-10">
+				<input class="form-control full-width" id="publisher" name="publisher" type="text" placeholder="publisher" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="dateline">Location</label>
+			<div class="col-sm-10">
+				<input class="form-control full-width" id="dateline" name="dateline" type="text" placeholder="dateline" required>
+			</div>
+		</div>
+		<div class="form-group mrgn-tp-md">
+			<label class="control-label" for="content">Content to post</label>
+			<textarea class="form-control full-width" id="content" name="content"></textarea>
+		</div>
+		<div class="form-group mrgn-tp-md">
+			<label class="control-label" for="moreContent">Additional content to post after the -30- mark</label>
+			<textarea class="form-control full-width" id="moreContent" name="moreContent"></textarea>
+		</div>
+		<fieldset>
+			<legend>Quotes</legend>
+			<div id="quoteBox">
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="citation1">Quote 1</label>
+				<div class="col-sm-10">
+					<textarea class="form-control full-width" id="citation1" name="citation1"></textarea>
+				</div>
+			</div>
+			<fieldset class="col-sm-11 col-sm-offset-1">
+				<legend>Person</legend>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="honorificPrefix">Prefix</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="honorificPrefix" name="honorificPrefix" type="text" placeholder="honorificPrefix" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="givenName">Given name</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="givenName" name="givenName" type="text" placeholder="givenName" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="familyName">Family name</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="familyName" name="familyName" type="text" placeholder="familyName" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="jobTitle">Job title</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="jobTitle" name="jobTitle" type="text" placeholder="jobTitle" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="affiliation">Affiliation</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="affiliation" name="affiliation" type="text" placeholder="affiliation" required>
+					</div>
+				</div>
+			</fieldset>
+			</div>
+			<button class="btn btn-default" id="AddMoreQuoteBox"><span class="glyphicon glyphicon-plus-sign mrgn-rght-md"></span>Add another quote</button>
+		</fieldset>
+		<fieldset class="mrgn-tp-lg">
+			<legend>Quick facts</legend>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="fact">Quick fact</label>
+				<div class="col-sm-10">
+					<input class="form-control full-width" id="fact" name="fact" type="text" placeholder="fact" required>
+				</div>
+			</div>
+			<button class="btn btn-default"><span class="glyphicon glyphicon-plus-sign mrgn-rght-md"></span>Add another fact</button>
+		</fieldset>
+		<div class="row">
+		<fieldset class="mrgn-tp-lg col-sm-12">
+			<legend>Contact</legend>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="contactType">Type of contact</label>
+				<div class="col-sm-10">
+					<select name="contactType" id="contactType" class="form-control">
+						<option value="Person">Person</option>
+						<option value="Organization">Organization</option>
+					</select>
+				</div>
+			</div>
+			<!-- IF PERSON -->
+			<div class="form-group col-sm-6">
+				<label class="col-sm-3 control-label" for="givenNameContact">Given name</label>
+				<div class="col-sm-9">
+					<input class="form-control full-width" id="givenNameContact" name="givenNameContact" type="text" placeholder="givenNameContact" required>
+				</div>
+			</div>
+			<div class="form-group col-sm-6">
+				<label class="col-sm-3 control-label" for="familyNameContact">Family name</label>
+				<div class="col-sm-9">
+					<input class="form-control full-width" id="familyNameContact" name="familyNameContact" type="text" placeholder="familyNameContact" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="jobTitleContact">Job title</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="jobTitleContact" name="jobTitleContact" type="text" placeholder="jobTitleContact">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="worksFor">Affiliation</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="worksFor" name="worksFor" type="text" placeholder="worksFor">
+				</div>
+			</div>
+			<!-- IF ORGANIZATION -->
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="contactType">Contact type - Organization</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="contactTypeOrg" name="contactType" type="text" placeholder="contactType">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="name">Department - Organization</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="name" name="name" type="text" placeholder="name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="addressLocality">Location - Organization</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="addressLocality" name="addressLocality" type="text" placeholder="addressLocality">
+				</div>
+			<!-- /END IF -->
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="email">Email</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="email" name="email" type="text" placeholder="email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="telephone">Telephone</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="telephone" name="telephone" type="text" placeholder="telephone">
+				</div>
+			</div>
+			<button class="btn btn-default"><span class="glyphicon glyphicon-plus-sign mrgn-rght-md"></span>Add another contact</button>
+		</fieldset>
+		</div>
+		<button class="btn btn-primary btn-lg btn-block mrgn-tp-lg" type="submit">Generate HTML</button>
+</form> 
 
 
-      				<p class="text-center">-30-</p>
-			</article>
+<div id="contentArea">
+	<h2 class="wb-prettify all-pre lang-css linenums">Code</h2>
+	<pre class="prettyprint">
+		<code>
+&lt;p&gt;&lt;time datetime=&quot;<span id="datePublishedOut">&lt;!--###### datePublished ######--&gt;</span>&quot; property=&quot;datePublished&quot;&gt;&lt;!--###### datePublished ######--&gt;&lt;/time&gt; - &lt;span property=&quot;dateline&quot;&gt;&lt;!--###### dateline ######--&gt;&lt;/span&gt; - &lt;span property=&quot;publisher&quot;&gt;&lt;!--###### publisher ######--&gt;&lt;/span&gt;&lt;/p&gt;
+	&lt;!--################# CONTENT ################# --&gt;
+	&lt;p class=&quot;text-center&quot;&gt;-30-&lt;/p&gt;
+&lt;/article&gt;
+	&lt;!--################# ADDITIONAL CONTENT ################# --&gt;
+&lt;section&gt;
+	&lt;h2&gt;Quick Facts&lt;/h2&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;!--################# FACT #################--&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section&gt;
+	&lt;h2&gt;Quotes&lt;/h2&gt;
+	&lt;blockquote typeof=&quot;citation&quot;&gt;
+		&lt;p property=&quot;text&quot;&gt;&ldquo;&lt;!--################# QUOTE #################--&gt;&rdquo;&lt;/p&gt;
+		&lt;footer&gt;
+			&lt;cite property=&quot;person&quot;&gt;
+				&lt;em typeOf=&quot;person&quot;&gt;&lt;span property=&quot;honorificPrefix&quot;&gt;&lt;!--###### PREFIX ######--&gt;&lt;/span&gt; &lt;span property=&quot;givenName&quot;&gt;&lt;!--###### GIVEN NAME ######--&gt;&lt;/span&gt; &lt;span property=&quot;familyName&quot;&gt;&lt;!--###### FAMILY NAME ######--&gt;&lt;/span&gt;&lt;br /&gt;
+				&lt;span property=&quot;jobTitle&quot;&gt;&lt;!--###### JOB TITLE ######--&gt;&lt;/span&gt;&lt;/em&gt;
+			&lt;/cite&gt;
+		&lt;/footer&gt;
+	&lt;/blockquote&gt;
+&lt;/section&gt;
+&lt;section&gt;
+	&lt;h2&gt;Contacts&lt;/h2&gt;
+	&lt;p typeof=&quot;ContactPoint&quot;&gt;&lt;span property=&quot;contactType&quot;&gt;&lt;!--###### contactType ######--&gt;&lt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;name&quot;&gt;&lt;!--###### name ######--&gt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;addressLocality&quot;&gt;&lt;!--###### addressLocality ######--&gt;&lt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;telephone&quot;&gt;&lt;!--###### telephone ######--&gt;&lt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;email&quot;&gt;&lt;a href=&quot;mailto:media.nl@dfo-mpo.gc.ca&quot;&gt;&lt;!--###### email ######--&gt;&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/section&gt;
+		</code>
+	</pre>
 
-     <p><a href="www.Twitter.com/DFO_NL">Follow us on Twitter!</a></p>
- 
-
-
-     
-<section>
-	<h2>Quick Facts</h2>
-	
-		<ul>
-			<li>Up to $5.5 million for 127 projects to restore recreational fisheries habitat through Round II has been approved nationally.
-				
-			</li>
-		
-			<li>In Newfoundland and Labrador, five projects through Round II have been approved totalling up to $162,742:
-				
-				<ul><li>Salmonid Association of Eastern Newfoundland - Rennies River Restoration and Atlantic Salmon Habitat Restoration Project to enhance spawning and rearing habitat through the installation of in-stream structures and river bed substrate: up to $45,276</li>
-					<li>Indian Bay Ecosystem Corporation - Moccasin Pond Brook Enhancement Project to improve access to spawning and rearing habitat for Atlantic salmon and brook trout through the installation of in-stream structures and plantings in areas bordering the water: up to $18,090</li>
-					<li>Gander River Ecosystem Corporation - Beaver Dam Removal Project to remove eight beaver dams from six tributaries in the Gander River watershed to improve fish migration: up to $12,200</li>
-					<li>Labrador Hunting and Fishing Association - Birch Island Creek Remediation and Restoration of Habitat Project at two river crossings that impede migration: up to $78,680</li>
-					<li>Environment Resources Management Association - Exploits River Tributaries Restoration Project 2014 to remove blockages to Atlantic salmon migrations: up to $8,496</li>
-					
-				</ul>
-				
-			</li>
-		
-			<li>The Government of Canada is now accepting funding applications for Round III until August 15, 2014. Additional program information as well as the application form and guidelines are available on the <a href="http://www.dfo-mpo.gc.ca/pnw-ppe/rfcpp-ppcpr/index-eng.html">Department’s web site</a>
-				
-			</li>
-		</ul>
-		
-</section>
-
-
-
-     
-<section>
-	<h2>Quotes</h2>
-	 
-	<blockquote typeof="citation">
-		<p property="text">“Our Government is committed to supporting the individuals and organizations who are working along the shores of lakes, rivers and streams across this country to protect and restore fishing habitats for future generations. Recreational fishing is an important economic activity which attracts thousands of visitors to Canada and contributes billions of dollars to our economy every year. The projects funded by the Recreational Fisheries Conservation Partnerships Program will benefit Canadian communities for years to come.”</p>
-		<footer>
-		<cite property="person">
-			
-			<em typeOf="person"><span property="honorificPrefix">The Honourable</span> <span property="givenName">Gail</span> <span property="familyName">Shea</span><br />
-			<span property="jobTitle">Minister of Fisheries and Oceans</span></em></cite>
-		</footer>
-		</blockquote>
-	
-</section>
-
-     
-<section>
-<h2>Contacts</h2>
-
-
-
-<p typeof="ContactPoint"><span property="contactType">Media Inquiries</span><br />
-<span property="name">Fisheries and Oceans Canada</span><br />
-<span property="addressLocality">Newfoundland and Labrador Region</span><br />
-<span property="telephone">709-772-3375</span><br />
-<span property="email"><a href="mailto:media.nl@dfo-mpo.gc.ca">media.nl@dfo-mpo.gc.ca</a></span><br /></p>
-
-
-</section>
-
-
-
-
+</div>
 
           <div class="row pagedetails">
        <div class="col-xs-6 datemod">
           <dl id="wb-dtmd">
             <dt>Date modified:&#32;</dt>
-            <dd><time property="dateModified">2014-07-23</time></dd>
+            <dd><time property="dateModified">2014-08-20</time></dd>
           </dl>
         </div>
         <div class="col-xs-6 text-right">

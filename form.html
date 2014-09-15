@@ -1,0 +1,224 @@
+---
+layout: default
+title:  Form for News.gc.ca
+dateModified: 2014-08-20
+---
+
+<p>The form on this pages is built to assist publishing news releases using HTML data and `RDFa`</p> 
+
+<form class="form-horizontal" id="posting" role="form">
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="type">Type</label>
+			<div class="col-sm-10">
+				<select name="type" id="type" class="form-control">
+					<option value="Backgrounders">Backgrounders</option>
+					<option value="Media Advisory">Media Advisory</option>
+					<option value="News Releases" selected>News Releases</option>
+					<option value="Speeches">Speeches</option>
+					<option value="Statements">Statements</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="headline">Title of posting</label>
+			<div class="col-sm-10">
+				<input class="form-control full-width" id="headline" name="headline" type="text" placeholder="headline">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="datePublished">Date published</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="datePublished" name="datePublished" type="date" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="publisher">Publisher</label>
+			<div class="col-sm-10">
+				<input class="form-control full-width" id="publisher" name="publisher" type="text" placeholder="publisher" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="dateline">Location</label>
+			<div class="col-sm-10">
+				<input class="form-control full-width" id="dateline" name="dateline" type="text" placeholder="dateline" required>
+			</div>
+		</div>
+		<div class="form-group mrgn-tp-md">
+			<label class="control-label" for="content">Content to post</label>
+			<textarea class="form-control full-width" id="content" name="content"></textarea>
+		</div>
+		<div class="form-group mrgn-tp-md">
+			<label class="control-label" for="moreContent">Additional content to post after the -30- mark</label>
+			<textarea class="form-control full-width" id="moreContent" name="moreContent"></textarea>
+		</div>
+		<fieldset>
+			<legend>Quotes</legend>
+			<div id="quoteBox">
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="citation1">Quote 1</label>
+				<div class="col-sm-10">
+					<textarea class="form-control full-width" id="citation1" name="citation1"></textarea>
+				</div>
+			</div>
+			<fieldset class="col-sm-11 col-sm-offset-1">
+				<legend>Person</legend>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="honorificPrefix">Prefix</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="honorificPrefix" name="honorificPrefix" type="text" placeholder="honorificPrefix" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="givenName">Given name</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="givenName" name="givenName" type="text" placeholder="givenName" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="familyName">Family name</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="familyName" name="familyName" type="text" placeholder="familyName" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="jobTitle">Job title</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="jobTitle" name="jobTitle" type="text" placeholder="jobTitle" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="affiliation">Affiliation</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="affiliation" name="affiliation" type="text" placeholder="affiliation" required>
+					</div>
+				</div>
+			</fieldset>
+			</div>
+			<button class="btn btn-default" id="AddMoreQuoteBox"><span class="glyphicon glyphicon-plus-sign mrgn-rght-md"></span>Add another quote</button>
+		</fieldset>
+		<fieldset class="mrgn-tp-lg">
+			<legend>Quick facts</legend>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="fact">Quick fact</label>
+				<div class="col-sm-10">
+					<input class="form-control full-width" id="fact" name="fact" type="text" placeholder="fact" required>
+				</div>
+			</div>
+			<button class="btn btn-default"><span class="glyphicon glyphicon-plus-sign mrgn-rght-md"></span>Add another fact</button>
+		</fieldset>
+		<div class="row">
+		<fieldset class="mrgn-tp-lg col-sm-12">
+			<legend>Contact</legend>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="contactType">Type of contact</label>
+				<div class="col-sm-10">
+					<select name="contactType" id="contactType" class="form-control">
+						<option value="Person">Person</option>
+						<option value="Organization">Organization</option>
+					</select>
+				</div>
+			</div>
+			<!-- IF PERSON -->
+			<div class="form-group col-sm-6">
+				<label class="col-sm-3 control-label" for="givenNameContact">Given name</label>
+				<div class="col-sm-9">
+					<input class="form-control full-width" id="givenNameContact" name="givenNameContact" type="text" placeholder="givenNameContact" required>
+				</div>
+			</div>
+			<div class="form-group col-sm-6">
+				<label class="col-sm-3 control-label" for="familyNameContact">Family name</label>
+				<div class="col-sm-9">
+					<input class="form-control full-width" id="familyNameContact" name="familyNameContact" type="text" placeholder="familyNameContact" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="jobTitleContact">Job title</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="jobTitleContact" name="jobTitleContact" type="text" placeholder="jobTitleContact">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="worksFor">Affiliation</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="worksFor" name="worksFor" type="text" placeholder="worksFor">
+				</div>
+			</div>
+			<!-- IF ORGANIZATION -->
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="contactType">Contact type - Organization</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="contactTypeOrg" name="contactType" type="text" placeholder="contactType">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="name">Department - Organization</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="name" name="name" type="text" placeholder="name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="addressLocality">Location - Organization</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="addressLocality" name="addressLocality" type="text" placeholder="addressLocality">
+				</div>
+			<!-- /END IF -->
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="email">Email</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="email" name="email" type="text" placeholder="email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="telephone">Telephone</label>
+				<div class="col-sm-10">
+					<input class="form-control" id="telephone" name="telephone" type="text" placeholder="telephone">
+				</div>
+			</div>
+			<button class="btn btn-default"><span class="glyphicon glyphicon-plus-sign mrgn-rght-md"></span>Add another contact</button>
+		</fieldset>
+		</div>
+		<button class="btn btn-primary btn-lg btn-block mrgn-tp-lg" type="submit">Generate HTML</button>
+</form> 
+
+
+<div id="contentArea">
+	<h2 class="wb-prettify all-pre lang-css linenums">Code</h2>
+	<pre class="prettyprint">
+		<code>
+&lt;p&gt;&lt;time datetime=&quot;<span id="datePublishedOut">&lt;!--###### datePublished ######--&gt;</span>&quot; property=&quot;datePublished&quot;&gt;&lt;!--###### datePublished ######--&gt;&lt;/time&gt; - &lt;span property=&quot;dateline&quot;&gt;&lt;!--###### dateline ######--&gt;&lt;/span&gt; - &lt;span property=&quot;publisher&quot;&gt;&lt;!--###### publisher ######--&gt;&lt;/span&gt;&lt;/p&gt;
+	&lt;!--################# CONTENT ################# --&gt;
+	&lt;p class=&quot;text-center&quot;&gt;-30-&lt;/p&gt;
+&lt;/article&gt;
+	&lt;!--################# ADDITIONAL CONTENT ################# --&gt;
+&lt;section&gt;
+	&lt;h2&gt;Quick Facts&lt;/h2&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;!--################# FACT #################--&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section&gt;
+	&lt;h2&gt;Quotes&lt;/h2&gt;
+	&lt;blockquote typeof=&quot;citation&quot;&gt;
+		&lt;p property=&quot;text&quot;&gt;&ldquo;&lt;!--################# QUOTE #################--&gt;&rdquo;&lt;/p&gt;
+		&lt;footer&gt;
+			&lt;cite property=&quot;person&quot;&gt;
+				&lt;em typeOf=&quot;person&quot;&gt;&lt;span property=&quot;honorificPrefix&quot;&gt;&lt;!--###### PREFIX ######--&gt;&lt;/span&gt; &lt;span property=&quot;givenName&quot;&gt;&lt;!--###### GIVEN NAME ######--&gt;&lt;/span&gt; &lt;span property=&quot;familyName&quot;&gt;&lt;!--###### FAMILY NAME ######--&gt;&lt;/span&gt;&lt;br /&gt;
+				&lt;span property=&quot;jobTitle&quot;&gt;&lt;!--###### JOB TITLE ######--&gt;&lt;/span&gt;&lt;/em&gt;
+			&lt;/cite&gt;
+		&lt;/footer&gt;
+	&lt;/blockquote&gt;
+&lt;/section&gt;
+&lt;section&gt;
+	&lt;h2&gt;Contacts&lt;/h2&gt;
+	&lt;p typeof=&quot;ContactPoint&quot;&gt;&lt;span property=&quot;contactType&quot;&gt;&lt;!--###### contactType ######--&gt;&lt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;name&quot;&gt;&lt;!--###### name ######--&gt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;addressLocality&quot;&gt;&lt;!--###### addressLocality ######--&gt;&lt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;telephone&quot;&gt;&lt;!--###### telephone ######--&gt;&lt;/span&gt;&lt;br /&gt;
+	&lt;span property=&quot;email&quot;&gt;&lt;a href=&quot;mailto:media.nl@dfo-mpo.gc.ca&quot;&gt;&lt;!--###### email ######--&gt;&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/section&gt;
+		</code>
+	</pre>
+
+</div>
